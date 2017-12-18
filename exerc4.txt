@@ -1,0 +1,24 @@
+double funcao (struct TEST a){
+	double media;
+	int i, j;
+	
+	printf("Digite o valor de T:\n");
+	scanf("%i", &a.t);
+	
+	for(i=0; i<a.t; i++){
+		for(j=0; j<a.t; j++){
+			printf("digite valor:\n");
+			scanf("%i",&a.x[i][j]);
+		}
+	}
+	media=0;
+	for(i=0; i<a.t; i++){
+		for(j=0; j<a.t; j++){
+			if(i==j){
+				a.vet[i] = a.x[i][j];
+				media = media + a.vet[i];
+			}
+		}    
+		 
+	return(media/a.t);	 
+}
